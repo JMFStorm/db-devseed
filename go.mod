@@ -1,4 +1,4 @@
-module github.com/JMFStorm/db-devseed
+module github.com/JMFStorm/dbds-devseed
 
 go 1.21.5
 
