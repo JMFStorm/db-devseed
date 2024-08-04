@@ -65,3 +65,9 @@ The `.sql` scripts are run in this order:
 
 4. **4_populate_data.sql**  
    This script should containt statements to populate the tables with initial data. It inserts predefined data that is needed for the application to function correctly or for testing purposes.
+
+### Seed database
+
+When `dbds.cfg` and .sql scripts under `dbds_script` are configured, you can seed your database with: `dbds rebuild`.
+
+Happy development!
