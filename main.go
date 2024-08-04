@@ -20,10 +20,10 @@ const (
         errorSystem = 71
         configFileName = "dbds.cfg"
         scriptsDirName = "dbds_scripts"
-        dropTablesFile = "schemas_drop.sql"
-        createTablesFile = "schemas_create.sql"
-        generateIndexesFile = "schemas_indexes.sql"
-        populateTablesFile = "schemas_populate.sql"
+        dropTablesFile = "1_drop_tables.sql"
+        createTablesFile = "2_create_tables.sql"
+        generateIndexesFile = "3_create_indexes.sql"
+        populateTablesFile = "4_populate_tables.sql"
         defaultConfigContent = "connectionString:\"\"\ndbType:\"postgres\""
 )
 
