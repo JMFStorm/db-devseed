@@ -2,6 +2,8 @@
 
 A simple database seeding tool to quickly build your development database.
 
+(Not to use in production.)
+
 ## Overview
 
 This project provides a command-line tool to seed a database with predefined data. It supports two main commands:
@@ -29,10 +31,22 @@ You can build from source with: `go build`.
 
 To initialize your database seed config, use the following command:
 
-```sh
+```
 dbds init
+```
 
 This will create a configuration file `dbds.cfg` and `dbds_script` directory with sql scripts in it.
+
+### Usage of dbds.cfg
+
+Type your **databse connection string** and **database type** in dbds.cfg configuration file.
+
+For example:
+
+```
+connectionString:"host=localhost user=db_dev_user password=db_dev_user_password dbname=database_name"
+dbType:"postgres"
+```
 
 ### Usage of dbds_scripts
 
