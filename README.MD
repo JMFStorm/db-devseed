@@ -1,4 +1,4 @@
-# dbds (Database Develeopment Seeder)
+# dbds (Database Develepment Seeder)
 
 A simple database seeding tool to quickly build your development database.
 
@@ -17,14 +17,37 @@ This project provides a command-line tool to seed a database with predefined dat
 
 ### Or build from source
 
-To build this tool from source, you'll need Go installed on your system. You can download Go from [the official Go website](https://golang.org/dl/).
+To build this tool from source, you'll need Go installed on your system.
+
+You can download Go from [the official Go website](https://golang.org/dl/).
+
 You can build from source with: `go build`.
 
 ## Usage
 
-### Initialize the Database
+### Initialize dbds config
 
-To initialize your database, use the following command:
+To initialize your database seed config, use the following command:
 
 ```sh
-./dbds init
+dbds init
+
+This will create a configuration file `dbds.cfg` and `dbds_script` directory with sql scripts in it.
+
+### Usage of dbds_scripts
+
+The `.sql` scripts under `dbds_script` are the SQL statements to be run during `dbds rebuild`.
+
+The `.sql` scripts are run in this order:
+
+1. **1_drop_tables.sql**  
+   This script should contain statements to drop the existing tables from the database. It ensures that the schema is clean before creating new tables.
+
+2. **2_create_tables.sql**  
+   This script should contain statements to create the necessary tables for the database schema. It defines the structure of the database by creating tables and their relationships.
+
+3. **3_create_indexes.sql**  
+   This script should contain statements to create indexes on the tables to optimize query performance. Indexes help speed up data retrieval operations.
+
+4. **4_populate_data.sql**  
+   This script should containt statements to populate the tables with initial data. It inserts predefined data that is needed for the application to function correctly or for testing purposes.
