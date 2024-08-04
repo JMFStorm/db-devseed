@@ -68,6 +68,10 @@ The `.sql` scripts are run in this order:
 
 ### Seed database
 
-When `dbds.cfg` and .sql scripts under `dbds_script` are configured, you can seed your database with: `dbds rebuild`.
+When `dbds.cfg` and .sql scripts under `dbds_script` are configured, you can seed your database with command:
+
+```
+dbds rebuild
+```
 
 Happy development!
