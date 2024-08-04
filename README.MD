@@ -15,7 +15,7 @@ This project provides a command-line tool to seed a database with predefined dat
 
 ### Download prebuilt binaries
 
--
+- Get Windows and Linux executable from [releases](https://github.com/JMFStorm/dbds-devseed/releases/tag/1.0.0).
 
 ### Or build from source
 
