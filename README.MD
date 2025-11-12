@@ -1,4 +1,4 @@
-# dbds (Database Develepment Seeder)
+# dbds (Database Development Seeder)
 
 A simple database seeding tool to quickly build your development database.
 
